@@ -24,6 +24,7 @@ main {
 section#cards {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-top: 5rem;
 }
 
@@ -31,6 +32,7 @@ section#cards div.card {
   width: 20rem;
   box-shadow: 5px 5px 5px 5px #00000015;
   padding: 1rem;
+  margin-top: 3rem;
 }
 
 section#cards div.card img {

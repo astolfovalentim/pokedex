@@ -5,6 +5,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded());
 
 const pokedex = [
   {
@@ -32,6 +33,14 @@ const pokedex = [
     tipo: "Water",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
   },
+  {
+    id: 4,
+    nome: "Pikachu",
+    descricao:
+      "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+    tipo: "Eletric",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+  },
 ];
 
 //Rotas
@@ -39,7 +48,20 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
-app.post("/add", (req, res) => {});
+app.post("/create", (req, res) => {
+  const pokemon = req.body;
+  pokemon.id = pokedex.length + 1;
+  pokedex.push(pokemon);
+  res.redirect("/");
+});
+
+app.get("/update/:id", (req, res) => {
+  const id = +req.params.id;
+
+  const pokemon = pokedex.find((pokemon) => pokemon.id === id);
+
+  res.render("index", { pokemon, pokedex });
+});
 
 app.listen(3000, () =>
   console.log("Servidor rodando em http:// localhost:3000")
