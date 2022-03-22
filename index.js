@@ -38,6 +38,11 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
+app.post("/add", (req, res) =>) {
+
+    
+}
+
 app.listen(3000, () =>
   console.log("Servidor rodando em http:// localhost:3000")
 );
