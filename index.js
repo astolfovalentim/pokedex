@@ -15,14 +15,22 @@ const pokedex = [
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
     tipo: "Grass",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    altura: "0,7m",
+    peso: "6,9kg",
+    categoria: "Seed",
+    habilidade: "Overgrow",
   },
   {
     id: 2,
-    nome: "Venusaur",
+    nome: "Charmander",
     descricao:
-      "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
-    tipo: "Grass",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+      "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+    tipo: "Fire",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    altura: "0,6m",
+    peso: "8,5kg",
+    categoria: "Lizard",
+    habilidade: "Blaze",
   },
 
   {
@@ -32,6 +40,10 @@ const pokedex = [
       "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
     tipo: "Water",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    altura: "0,5m",
+    peso: "9,0kg",
+    categoria: "Tiny Turtle",
+    habilidade: "Torrent",
   },
   {
     id: 4,
@@ -40,6 +52,10 @@ const pokedex = [
       "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
     tipo: "Eletric",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+    altura: "0,4m",
+    peso: "6,0kg",
+    categoria: "Mouse",
+    habilidade: "Static",
   },
 ];
 

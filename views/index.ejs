@@ -19,7 +19,12 @@
           <img src="<%= pokemon.imagem %>" alt="" />
           <h2><%= pokemon.nome %></h2>
           <p class="descricao"><%= pokemon.descricao %></p>
-          <p><%= pokemon.tipo %></p>
+          <p>Número: <%= pokemon.id %></p>
+          <p>Tipo: <%= pokemon.tipo %></p>
+          <p>Altura: <%= pokemon.altura %></p>
+          <p>Peso: <%= pokemon.peso %></p>
+          <p>Categoria: <%= pokemon.categoria %></p>
+          <p>Habilidade: <%= pokemon.habilidade %></p>
           <a href="/update/<%= pokemon.id %>">Editar </a>
         </div>
         <% }) %>
@@ -42,6 +47,18 @@
 
           <label for="imagem">Link da Imagem:</label>
           <input type="text" id="imagem" name="imagem" />
+
+          <label for="altura">Altura:</label>
+          <input type="text" id="altura" name="altura" />
+
+          <label for="peso">Peso:</label>
+          <input type="text" id="peso" name="peso" />
+
+          <label for="categoria">Categoria:</label>
+          <input type="text" id="categoria" name="categoria" />
+
+          <label for="habilidade">Habilidade:</label>
+          <input type="text" id="habilidade" name="habilidade" />
 
           <button id="btnCadastrar" type="submit">Cadastrar</button>
         </form>
