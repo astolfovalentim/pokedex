@@ -1,8 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const res = require("express/lib/response");
 const path = require("path");
 const app = express();
 let message = "";
+
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -98,6 +101,6 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro", { pokedex, menu });
 });
 
-app.listen(3000, () =>
-  console.log("Servidor rodando em http:// localhost:3000")
+app.listen(port, () =>
+  console.log(`Servidor rodando em http:// localhost:${port}`)
 );
