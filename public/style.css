@@ -32,7 +32,7 @@ section#cards div.card {
   width: 20rem;
   box-shadow: 5px 5px 5px 5px #00000015;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 3rem 0 5rem 0;
 }
 
 section#cards div.card img {
@@ -41,6 +41,32 @@ section#cards div.card img {
 
 section#cards div.card p.descricao {
   margin-bottom: 1rem;
+}
+
+section#cards div.card h3 {
+  margin-bottom: 1rem;
+}
+
+section#cards div.card a {
+  padding: 0.6rem;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px red;
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+section#cards h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 section#cadastro {
