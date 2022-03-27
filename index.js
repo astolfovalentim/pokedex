@@ -10,11 +10,11 @@ app.use(express.urlencoded());
 
 const menu = [
   {
-    title: "pokedex",
+    title: "Pokédex",
     link: "/",
   },
   {
-    title: "adicionar",
+    title: "Adicionar",
     link: "/cadastro",
   },
 ];

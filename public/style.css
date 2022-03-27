@@ -8,7 +8,7 @@
 
 header {
   padding: 3rem;
-  background-color: red;
+  background-color: #dc0a2d;
 }
 
 header h1 {
@@ -129,5 +129,27 @@ section#cadastro form button:hover {
 }
 
 .barra a:hover {
-  background-color: rgba(63, 10, 160, 0.979);
+  background-color: rgba(54, 53, 54, 0.979);
+}
+
+footer {
+  background-color: #dc0a2d;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
 }
