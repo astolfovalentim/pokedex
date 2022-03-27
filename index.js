@@ -2,10 +2,22 @@ const express = require("express");
 const res = require("express/lib/response");
 const path = require("path");
 const app = express();
+let message = "";
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
+
+const menu = [
+  {
+    title: "pokedex",
+    link: "/",
+  },
+  {
+    title: "adicionar",
+    link: "/cadastro",
+  },
+];
 
 const pokedex = [
   {
@@ -59,33 +71,31 @@ const pokedex = [
   },
 ];
 let pokemon = undefined;
+
 //Rotas
 app.get("/", (req, res) => {
-  res.render("index", { pokedex, pokemon });
+  setTimeout(() => {
+    message = "";
+  }, 5000);
+  res.render("index", { pokedex, pokemon, menu, message });
 });
 
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
+  message = "Pokemon foi cadastrado com sucesso!";
   res.redirect("/");
 });
 
 app.get("/detalhes/:id", (req, res) => {
-  const id = +req.params.id;
-  pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.redirect("/");
+  const id = req.params.id - 1;
+
+  res.render("detalhes", { pokedex, id, menu });
 });
 
-app.post("/update/:id", (req, res) => {
-  const id = +req.params.id - 1;
-
-  const newPokemon = req.body;
-  newPokemon.id = id + 1;
-
-  pokedex[id] = newPokemon;
-  pokemon = undefined;
-  res.redirect("/");
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro", { pokedex, menu });
 });
 
 app.listen(3000, () =>
