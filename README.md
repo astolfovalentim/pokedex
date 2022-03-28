@@ -2,8 +2,8 @@
 
 O projeto consiste em construir uma aplicação que extrai os dados dos Pokemons do site Pokédex usando a linguagem JavaScript e as tecnologias: Express, HTML e CSS.
 Os requisitos do projeto são:
-Toda entrada de dados deve ser validada antes.
-Criar um menu de navegação em todas as telas.
+- Toda entrada de dados deve ser validada antes.
+- Criar um menu de navegação em todas as telas.
 Criar as telas EJS.
 Responsividade em todas as telas.
 Criar a estilização das páginas.
