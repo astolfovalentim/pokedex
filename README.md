@@ -12,3 +12,5 @@ Os requisitos do projeto são:
 - Respeitar o padrão MVC.
 - Github organizado do projeto com licença, Read.me preenchido falando do projeto e Gitignore correto.
 - Projeto postado no Heroku.
+
+O projeto está postado no seguinte endereço: https://pokedex-mvc-blue.herokuapp.com/
